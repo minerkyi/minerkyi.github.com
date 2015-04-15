@@ -1,9 +1,16 @@
 <!DOCTYPE HTML>
-<html ng-app="app">
+<html lang="ko" ng-app="ctrl">
 	<head>
-		<script src="/js/angular.js"></script>
+		<meta charset="utf-8">
+		<script src="../js/angular.js"></script>
+		<script src="../js/controller.js"></script>
 	</head>
-	<body>
-		I can add: {{1+2}}.		
+	<body ng-controller="PhoneListCtrl">
+		<ul>
+			<li ng-repeat="phone in phones">
+				{{phone.name}}
+				<p>{{phone.snippet}}</p>
+			</li>
+		</ul>		
 	</body>
 </html>
